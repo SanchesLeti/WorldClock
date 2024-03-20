@@ -1,10 +1,81 @@
-h1 {
-    text-align: center;
-    font-weight: 400;
-    font-family:fantasy;
+body {
+  background-color: rgb(241, 201, 235);
+  font-family: "Amatic SC", sans-serif;
+}
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: url(img/pink-rose.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
 
+select {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 30px;
+  background-color: white;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  letter-spacing: 8px;
+}
+h1 {
+  font-family: "Amatic SC", sans-serif;
+  text-align: center;
+  font-weight: 1000;
+  font-size: 50px;
+  margin: 0 0 5px;
+  padding: 20px 20px;
+  font-weight: 1000;
+  color: rgb(15, 108, 15);
+  letter-spacing: 8px;
+}
+h2 {
+  margin: 0 0 5px;
+  font-size: 38px;
+  color: rgb(20, 107, 20);
+  letter-spacing: 8px;
+}
 
 footer {
-    text-align: center;
+  text-align: center;
+  font-size: 19px;
+  color: white;
+  font-style: italic;
+  font-family: fantasy;
+}
+a {
+  text-decoration: none;
+  color: rgb(184, 137, 227);
+  font-weight: 900;
+}
+.city {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+  border-bottom: 1px dotted grey;
+  padding: 20px 0;
+}
+.city:last-child {
+  border: none;
+}
+.time {
+  font-size: 38px;
+  font-weight: 1000;
+  color: rgb(20, 107, 20);
+}
+.time small {
+  font-size: 20px;
+  vertical-align: middle;
+  line-height: 36px;
+}
+.date {
+  opacity: 0.7;
+  font-size: 19px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
