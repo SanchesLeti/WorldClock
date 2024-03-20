@@ -32,7 +32,10 @@ setInterval(updatedCapeVerdeTime, 1000);
 
 //dropdownButton
 function updateCity(event) {
-  let cityTimeZone = event.target.value;
+    let cityTimeZone = event.target.value;
+    if (cityTimeZone === "current") {
+        cityTimeZone = moment.tz.guess();
+    }
   let cityName;
   if (cityTimeZone.includes("_")) {
     cityName = cityTimeZone.replace("_", " ").split("_")[1];
