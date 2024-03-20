@@ -63,6 +63,7 @@ a {
 }
 .city:last-child {
   border: none;
+  padding-bottom: 267px;
 }
 .time {
   font-size: 38px;
