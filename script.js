@@ -29,3 +29,32 @@ function updatedCapeVerdeTime() {
 
 updatedCapeVerdeTime();
 setInterval(updatedCapeVerdeTime, 1000);
+
+//dropdownButton
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityName;
+  if (cityTimeZone.includes("_")) {
+    cityName = cityTimeZone.replace("_", " ").split("_")[1];
+  } else if (cityTimeZone.includes("/")) {
+    cityName = cityTimeZone.split("/")[1];
+  } else {
+    cityName = "Unknown";
+  }
+
+  let cityTime = moment().tz(cityTimeZone);
+  let citiesSelectElement = document.querySelector("#cities");
+  citiesSelectElement.innerHTML = `
+    <div class="city">
+      <div>
+        <h2>${cityName}</h2>
+        <div class="date">${cityTime.format("MMMM Do, YYYY")}</div>
+      </div>
+      <div class="time">${cityTime.format("h:mm:ss")}<small>${cityTime.format(
+    "A"
+  )}</small></div>
+    </div>`;
+}
+
+let citiesSelectElement = document.querySelector("#city");
+citiesSelectElement.addEventListener("change", updateCity);
