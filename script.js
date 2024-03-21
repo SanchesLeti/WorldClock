@@ -30,6 +30,22 @@ function updatedCapeVerdeTime() {
 updatedCapeVerdeTime();
 setInterval(updatedCapeVerdeTime, 1000);
 
+// Rome
+function updatedRomeTime() {
+  let romeElement = document.querySelector("#rome");
+  let romeDateElement = romeElement.querySelector(".date");
+  let romeTimeElement = romeElement.querySelector(".time");
+  let romeTime = moment().tz("Europe/Rome");
+
+  romeDateElement.innerHTML = romeTime.format("MMMM Do, YYYY");
+  romeTimeElement.innerHTML = romeTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+}
+
+updatedRomeTime();
+setInterval(updatedRomeTime, 1000);
+
 //dropdownButton
 function updateCity(event) {
     let cityTimeZone = event.target.value;
@@ -56,7 +72,9 @@ function updateCity(event) {
       <div class="time">${cityTime.format("h:mm:ss")}<small>${cityTime.format(
     "A"
   )}</small></div>
-    </div>`;
+    </div>
+    <a href="index.html"> <strong>All cities</strong></a>
+    `;
 }
 
 let citiesSelectElement = document.querySelector("#city");
